@@ -1,0 +1,71 @@
+/* General Properties */
+
+:root {
+    --background-color: rgb(221, 221, 221);
+    --header-background-color: rgb(219, 202, 202);
+    --text-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    margin: 0px;
+    background-color: var(--background-color);
+    min-height: 100%;
+}
+
+header {
+    padding: 8px;
+    grid-column: 1 / -1;
+    background-color: var(--header-background-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    display: inline-block;
+    margin: 0px;
+}
+
+.add-book {
+    padding: 12px 0px;
+    grid-column:  1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
