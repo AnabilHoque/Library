@@ -1,5 +1,7 @@
 /* General Properties */
 
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
 :root {
     --background-color: rgb(221, 221, 221);
     --header-background-color: rgb(219, 202, 202);
@@ -11,20 +13,21 @@
 }
 
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 body {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: auto auto 1fr auto;
     margin: 0px;
     background-color: var(--background-color);
     min-height: 100%;
+    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
 }
 
 header {
-    padding: 8px;
+    padding: 1rem 5rem;
     grid-column: 1 / -1;
     background-color: var(--header-background-color);
 }
@@ -36,16 +39,42 @@ header {
 }
 
 .header-container h1 {
-    display: inline-block;
     margin: 0px;
+    position: relative;
+    top: 0.5rem;
+}
+
+.header-container button {
+    width: 100px;
+    height: 40px;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: yellow;
+    font-size: medium;
+    cursor: pointer;
 }
 
 .add-book {
-    padding: 12px 0px;
+    padding: 1.5rem 0px;
     grid-column:  1 / -1;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.add-book button {
+    width: 100px;
+    height: 40px;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: yellow;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+main {
+    padding: 0rem 5rem;
 }
 
 footer {
@@ -56,6 +85,7 @@ footer {
 }
 
 footer p {
+    margin: 0px;
     font-size: 20px;
 }
 

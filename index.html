@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/library-favicon.ico">
     <title>Library</title>
 </head>
 <body>
@@ -17,7 +18,16 @@
         <button type="button">Add Book</button>
     </div>
     <main>
-        <div class="books-collection"></div>
+        <div class="books-collection">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th>Remove?</th>
+                </tr>
+            </table>
+        </div>
     </main>
     <aside>
         <div class="info">
@@ -31,5 +41,6 @@
     <footer>
         <p>Copyright &copy; Anabil Hoque</p>
     </footer>
+    <script src="library-logic.js"></script>
 </body>
 </html>
