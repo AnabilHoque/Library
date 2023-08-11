@@ -8,14 +8,40 @@
     <title>Library</title>
 </head>
 <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Add a new Book:</h1>
+            <form action="#" method="post">
+                <div>
+                    <input type="text" id="book-title" name="book-title" placeholder="Title">
+                </div>
+                <div>
+                    <input type="text" id="book-author" name="book-author" placeholder="Author">
+                </div>
+                <div>
+                    <input type="number" id="num-pages" name="num-pages" placeholder="Pages">
+                </div>
+                <div>
+                    <label for="book-read">Have you read the book?</label>
+                    <input type="checkbox" id="book-read" name="book-read">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <header>
         <div class="header-container">
             <h1>Library</h1>
-            <button type="button">Log in</button>
+            <button type="button"><span>Log in</span></button>
         </div>
     </header>
     <div class="add-book">
-        <button type="button">Add Book</button>
+        <button type="button"><span>Add Book</span></button>
     </div>
     <main>
         <div class="books-collection">

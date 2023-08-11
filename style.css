@@ -4,7 +4,7 @@
 
 :root {
     --background-color: rgb(221, 221, 221);
-    --header-background-color: rgb(219, 202, 202);
+    --header-background-color: #FFD2BD;
     --text-color: black;
 }
 
@@ -26,8 +26,10 @@ body {
     font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
 }
 
+/* Header */
+
 header {
-    padding: 1rem 5rem;
+    padding: 0.35rem 5rem;
     grid-column: 1 / -1;
     background-color: var(--header-background-color);
 }
@@ -42,17 +44,33 @@ header {
     margin: 0px;
     position: relative;
     top: 0.5rem;
+    font-size: 38px;
 }
 
 .header-container button {
     width: 100px;
-    height: 40px;
-    border: 3px solid red;
+    height: 50px;
+    border: 3px solid #FFDF8D;
     border-radius: 10px;
-    background-color: yellow;
-    font-size: medium;
+    background-color: #F9F871;
+    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
     cursor: pointer;
+    position: relative;
 }
+
+.header-container button span {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 24px;
+}
+
+.header-container button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+/* Add a new Book button */
 
 .add-book {
     padding: 1.5rem 0px;
@@ -63,15 +81,29 @@ header {
 }
 
 .add-book button {
-    width: 100px;
-    height: 40px;
-    border: 3px solid red;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #FFDF8D;
     border-radius: 10px;
-    background-color: yellow;
-    font-size: medium;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F9F871;
+    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
     cursor: pointer;
+    position: relative;
 }
+
+.add-book button span {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 24px;
+}
+
+.add-book button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+/* Main Content */
 
 main {
     padding: 0rem 5rem;
@@ -88,6 +120,47 @@ footer p {
     margin: 0px;
     font-size: 20px;
 }
+
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content h1 {
+    margin: 0px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 
 
 
