@@ -109,17 +109,7 @@ main {
     padding: 0rem 5rem;
 }
 
-footer {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer p {
-    margin: 0px;
-    font-size: 20px;
-}
+/* Modal */
 
 .modal {
     display: none;
@@ -132,20 +122,62 @@ footer p {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .modal-content {
+    text-align: center;
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    border: 2px solid #888;
+    border-radius: 22px;
+    width: 30%;
 }
 
 .modal-content h1 {
-    margin: 0px;
+    margin: 1px;
 }
 
-/* The Close Button */
+.modal-content input:not(#book-read) {
+    height: 40px;
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.modal-content label[for="book-read"] {
+    font-size: 20px;
+}
+
+.modal-content input[type="checkbox"] {
+    height: 23px;
+    width: 23px;
+    border: 1px solid black;
+    position: relative;
+    bottom: -5px;
+}
+
+.modal-content button {
+    width: 40%;
+    height: 50px;
+    font-size: 24px;
+    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
+    border: 3px solid #aaa;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.modal-content button span {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    font-size: 24px;
+}
+
+.modal-content button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px 1px black;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -158,6 +190,20 @@ footer p {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0px;
+    font-size: 20px;
 }
 
 
