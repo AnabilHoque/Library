@@ -47,10 +47,18 @@
         <div class="books-collection">
             <table>
                 <tr>
-                    <th>Name</th>
+                    <th>Title</th>
                     <th>Author</th>
+                    <th>Pages</th>
                     <th>Status</th>
                     <th>Remove?</th>
+                </tr>
+                <tr>
+                    <td>Anabil's Book</td>
+                    <td>Anabil Hoque</td>
+                    <td>100</td>
+                    <td>Read</td>
+                    <td><button type="button" class="remove-button">Remove</button></td>
                 </tr>
             </table>
         </div>
@@ -58,10 +66,10 @@
     <aside>
         <div class="info">
             <h2>Information</h2>
-            <h3>Books: <span>0</span></h3>
-            <h3>Books read: <span>0</span></h3>
-            <h3>Books not read: <span>0</span></h3>
-            <h3>Total pages read: <span>0</span></h3>
+            <h3>Books: <span id="num-books">0</span></h3>
+            <h3>Books read: <span id="num-books-read">0</span></h3>
+            <h3>Books not read: <span id="num-books-not-read">0</span></h3>
+            <h3>Total pages read: <span id="total-pages-read">0</span></h3>
         </div>
     </aside>
     <footer>

@@ -106,7 +106,45 @@ header {
 /* Main Content */
 
 main {
-    padding: 0rem 5rem;
+    padding: 0rem 1rem 0rem 5rem;
+}
+
+table {
+    table-layout: fixed;
+    min-width: 100%;
+}
+
+td {
+    text-align: center;
+}
+
+table, th, td {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.remove-button {
+    width: 95%;
+    height: 30px;
+    background-color: #F9F871;
+    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: medium;
+    border: 3px solid #FFDF8D;
+    border-radius: 10px;
+}
+
+.remove-button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+.info {
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 80%;
+    overflow-wrap: break-word;
 }
 
 /* Modal */
@@ -156,20 +194,15 @@ main {
 }
 
 .modal-content button {
-    width: 40%;
+    min-width: 50%;
     height: 50px;
-    font-size: 24px;
     font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
     border: 3px solid #aaa;
     border-radius: 10px;
     cursor: pointer;
-    position: relative;
 }
 
 .modal-content button span {
-    position: absolute;
-    top: 15%;
-    left: 15%;
     font-size: 24px;
 }
 
