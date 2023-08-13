@@ -1,11 +1,9 @@
 /* General Properties */
 
-@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
-
 :root {
-    --background-color: rgb(221, 221, 221);
-    --header-background-color: #FFD2BD;
-    --text-color: black;
+    --background-color: #111027;
+    --header-background-color: #090817;;
+    --text-color: white;
 }
 
 * {
@@ -22,14 +20,15 @@ body {
     grid-template-rows: auto auto 1fr auto;
     margin: 0px;
     background-color: var(--background-color);
+    color: var(--text-color);
     min-height: 100%;
-    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Header */
 
 header {
-    padding: 0.35rem 5rem;
+    padding: 1rem 5rem;
     grid-column: 1 / -1;
     background-color: var(--header-background-color);
 }
@@ -42,32 +41,24 @@ header {
 
 .header-container h1 {
     margin: 0px;
-    position: relative;
-    top: 0.5rem;
     font-size: 38px;
+    vertical-align: middle;
 }
 
 .header-container button {
-    width: 100px;
-    height: 50px;
-    border: 3px solid #FFDF8D;
-    border-radius: 10px;
-    background-color: #F9F871;
-    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
+    height: 42px;
+    width: 10%;
+    border: 3px solid #000f45;;
+    border-radius: 12px;
+    background-color: #271033;
     cursor: pointer;
-    position: relative;
-}
-
-.header-container button span {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 24px;
+    font-size: 22px;
+    color: var(--text-color);
 }
 
 .header-container button:hover {
-    transform: scale(1.01);
-    box-shadow: 2px 2px 5px 1px black;
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px 1px #7c98fc;
 }
 
 /* Add a new Book button */
@@ -81,26 +72,16 @@ header {
 }
 
 .add-book button {
-    width: 150px;
-    height: 50px;
-    border: 3px solid #FFDF8D;
-    border-radius: 10px;
-    background-color: #F9F871;
-    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
+    border: none;
+    color: var(--text-color);
+    font-size: 32px;
+    background-color: inherit;
     cursor: pointer;
-    position: relative;
-}
-
-.add-book button span {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 24px;
 }
 
 .add-book button:hover {
-    transform: scale(1.01);
-    box-shadow: 2px 2px 5px 1px black;
+    transform: scale(1.05);
+    text-shadow: 2px 2px 4px #7c98fc;
 }
 
 /* Main Content */
@@ -119,29 +100,48 @@ td {
 }
 
 table, th, td {
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 3px solid #7c98fc;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #271033;
+    font-size: large;
+}
+
+td {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.remove-button, .read-toggle {
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.read-toggle.read-true {
+    background-color: green;
+}
+
+.read-toggle.read-false {
+    background-color: red;
 }
 
 .remove-button {
-    width: 95%;
-    height: 30px;
-    background-color: #F9F871;
-    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    font-size: medium;
-    border: 3px solid #FFDF8D;
-    border-radius: 10px;
+    background-color: rgb(27, 27, 62);
 }
 
-.remove-button:hover {
-    transform: scale(1.01);
-    box-shadow: 2px 2px 5px 1px black;
+.remove-button:hover, .read-toggle:hover {
+    box-shadow: 0px 0px 5px 1px black;
 }
 
 .info {
     text-align: center;
-    border: 3px solid black;
+    border: 3px solid #7c98fc;
     border-radius: 10px;
     width: 80%;
     overflow-wrap: break-word;
@@ -162,16 +162,16 @@ table, th, td {
 
 .modal-content {
     text-align: center;
-    background-color: #fefefe;
+    background-color: var(--background-color);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 2px solid #888;
+    border: 3px solid #7c98fc;
     border-radius: 22px;
     width: 30%;
 }
 
 .modal-content h1 {
-    margin: 1px;
+    margin: 10px 0px 20px 0px;
 }
 
 .modal-content input:not(#book-read) {
@@ -179,40 +179,41 @@ table, th, td {
     width: 80%;
     margin-bottom: 20px;
     font-size: 25px;
+    outline: none;
 }
 
 .modal-content label[for="book-read"] {
     font-size: 20px;
+    margin: 15px 0px;
 }
 
 .modal-content input[type="checkbox"] {
-    height: 23px;
-    width: 23px;
+    height: 20px;
+    width: 20px;
     border: 1px solid black;
     position: relative;
-    bottom: -5px;
+    bottom: -2px;
 }
 
 .modal-content button {
-    min-width: 50%;
-    height: 50px;
-    font-family: 'Borel', cursive, Arial, Helvetica, sans-serif;
-    border: 3px solid #aaa;
+    margin-top: 20px;
+    min-width: 30%;
+    height: 40px;
+    border: 3px solid #7c98fc;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.modal-content button span {
-    font-size: 24px;
+    font-size: 22px;
+    background-color: #271033;
+    color: var(--text-color);
 }
 
 .modal-content button:hover {
     transform: scale(1.01);
-    box-shadow: 2px 2px 5px 1px black;
+    box-shadow: 0px 0px 5px 1px #7c98fc;
 }
 
 .close {
-    color: #aaa;
+    color: var(--text-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -220,7 +221,7 @@ table, th, td {
   
 .close:hover,
 .close:focus {
-    color: black;
+    color: #7c98fc;
     text-decoration: none;
     cursor: pointer;
 }
@@ -235,7 +236,6 @@ footer {
 }
 
 footer p {
-    margin: 0px;
     font-size: 20px;
 }
 

@@ -22,14 +22,14 @@
                     <input type="text" id="book-author" name="book-author" placeholder="Author" required>
                 </div>
                 <div>
-                    <input type="number" id="num-pages" name="num-pages" placeholder="Pages" required>
+                    <input type="number" id="num-pages" name="num-pages" placeholder="Pages" min="0" required>
                 </div>
                 <div>
                     <label for="book-read">Have you read the book?</label>
                     <input type="checkbox" id="book-read" name="book-read">
                 </div>
                 <div>
-                    <button type="submit"><span>Submit</span></button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>
@@ -37,29 +37,33 @@
     <header>
         <div class="header-container">
             <h1>Library</h1>
-            <button type="button"><span>Log in</span></button>
+            <button type="button">Log in</button>
         </div>
     </header>
     <div class="add-book">
-        <button type="button"><span>Add Book</span></button>
+        <button type="button">&plus; Add Book</button>
     </div>
     <main>
         <div class="books-collection">
             <table>
-                <tr>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Pages</th>
-                    <th>Status</th>
-                    <th>Remove?</th>
-                </tr>
-                <tr>
-                    <td>Anabil's Book</td>
-                    <td>Anabil Hoque</td>
-                    <td>100</td>
-                    <td>Read</td>
-                    <td><button type="button" class="remove-button">Remove</button></td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Status</th>
+                        <th>Remove?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Anabil's Book</td>
+                        <td>Anabil Hoque</td>
+                        <td>100</td>
+                        <td><button type="button" class="read-toggle read-true">Read</button></td>
+                        <td><button type="button" class="remove-button">Remove</button></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </main>

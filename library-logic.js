@@ -36,10 +36,10 @@ Book.prototype.getRead = function() {
 }
 
 function getTableRecords() {
-    const table = document.querySelector("table");
-    const numRows = table.rows.length;
-    const allRows = table.rows;
-    for (let i = 1; i < numRows; i++) {
+    const tableBody = document.querySelector("tbody");
+    const numRows = tableBody.rows.length;
+    const allRows = tableBody.rows;
+    for (let i = 0; i < numRows; i++) {
         // access individual row children elements
         const elemsInRow = Array.from(allRows[i].children);
         const [title, author, pages, readText, remove] = elemsInRow.map((elem) => elem.textContent);
@@ -77,14 +77,19 @@ function updateInformationSection() {
     totalPagesReadSpan.textContent = totalPagesRead;
 }
 
+function removeFromMyLibrary(rowIdxInArr) {
+    myLibrary.splice(rowIdxInArr, 1);
+}
+
 function addRemoveEventListeners() {
     // adds remove event listener for existing books
     const arrRemoveBtns = Array.from(document.querySelectorAll(".remove-button"));
     arrRemoveBtns.forEach(btn => btn.addEventListener("click", e => {
         const tableDataButton = e.target.parentElement;
         const tableDataRowBook = tableDataButton.parentElement;
-        //tableDataRowBook.remove();
-        console.log(tableDataRowBook.rowIndex);
+        const rowIdxInArr = tableDataRowBook.rowIndex-1; // -1, as 1st table row is for the headings which is not in myLibrary
+        removeFromMyLibrary(rowIdxInArr);
+        tableDataRowBook.remove();
     }));
 } 
 
@@ -117,7 +122,7 @@ function run() {
         e.preventDefault();
         const form = e.target;
         const allFormElems = Array.from(form.elements);
-        console.log(allFormElems);
+        console.log(allFormElems[0].value);
         form.reset();
     });
 
@@ -127,6 +132,8 @@ function run() {
 
     // add remove event listeners for existing table rows <=> existing books
     addRemoveEventListeners();
+
+    // add read toggle event listeners for existing table rows <=> existing books
 }
 
 run();
