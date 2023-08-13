@@ -3,4 +3,4 @@ Library page for the [Odin Project](https://www.theodinproject.com/lessons/node-
 Resources:
 * [Library icon created by popcornarts - Flaticon](https://www.flaticon.com/free-icons/library)
 
-Live Demo :point_left: (to be added)
+[Live Demo](https://anabilhoque.github.io/Library/) :point_left:
